@@ -5,6 +5,8 @@ import crazysoap.optimized.ParseBooleanOptimizedImpl;
 import crazysoap.simple.ParseBooleanSimpleImpl;
 import crazysoap.stringswitch.ParseBooleanStringSwitch;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Fork;
 import org.openjdk.jmh.annotations.Level;
@@ -35,10 +37,10 @@ import org.openjdk.jmh.annotations.Warmup;
  *
  * @author mosmann
  */
-@Warmup(iterations = 2)
-@Measurement(iterations = 2)
-@Fork(value = 1, warmups = 1)
-@State(Scope.Thread)
+@Warmup(iterations = 2, time=1,timeUnit=TimeUnit.SECONDS)
+@Measurement(iterations = 2, time=3,timeUnit=TimeUnit.SECONDS)
+@Fork(value = 2, warmups = 2)
+@State(Scope.Benchmark)
 public class ParseBooleanBenchmarkTest {
 
 	@Param({"true","false","1","0","tru","fals"})
