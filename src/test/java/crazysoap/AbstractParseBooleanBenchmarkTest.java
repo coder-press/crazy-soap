@@ -34,22 +34,28 @@ import org.openjdk.jmh.annotations.Warmup;
 @State(Scope.Thread)
 public abstract class AbstractParseBooleanBenchmarkTest {
 
-	private static final String TRUE = "true";
-	private static final String FALSE = "false";
-	private static final String ONE = "1";
-	private static final String ZERO = "0";
-	private static final String FALSE_TRUE = "tru";
-	private static final String FALSE_FALSE = "fals";
 
 	private static boolean parse(ParseBoolean impl, String value) {
 		return impl.parse(value);
 	}
 
 	private ParseBoolean impl;
+	private String TRUE = newInstance("true");
+	private String FALSE = newInstance("false");
+	private String ONE = newInstance("1");
+	private String ZERO = newInstance("0");
+	private String FALSE_TRUE = newInstance("tru");
+	private String FALSE_FALSE = newInstance("fals");
 
 	@Setup
 	public void setup() {
 		impl = instance();
+	}
+
+	private String newInstance(String src) {
+		String ret = new StringBuilder().append(src).toString();
+		assert (src != ret);
+		return ret;
 	}
 
 	protected abstract ParseBoolean instance();

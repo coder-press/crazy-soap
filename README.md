@@ -8,30 +8,30 @@ see https://docs.google.com/presentation/d/1Y9NbTeAaftvAY00eJlU14RDbZTbqHmJJia_O
 
 ```
 Benchmark                                      Mode  Cnt          Score   Error  Units
-ParseBooleanTestJDK7_80.parse_false           thrpt    2   73615488,070          ops/s
-ParseBooleanTestJDK7_80.parse_falseTypo       thrpt    2   87833831,319          ops/s
-ParseBooleanTestJDK7_80.parse_one             thrpt    2  235619597,920          ops/s
-ParseBooleanTestJDK7_80.parse_true            thrpt    2   78245704,628          ops/s
-ParseBooleanTestJDK7_80.parse_trueTypo        thrpt    2  104196343,482          ops/s
-ParseBooleanTestJDK7_80.parse_zero            thrpt    2  255039227,316          ops/s
-ParseBooleanTestOptimized.parse_false         thrpt    2  347752757,480          ops/s
-ParseBooleanTestOptimized.parse_falseTypo     thrpt    2  317447946,441          ops/s
-ParseBooleanTestOptimized.parse_one           thrpt    2  314173124,756          ops/s
-ParseBooleanTestOptimized.parse_true          thrpt    2  213803902,742          ops/s
-ParseBooleanTestOptimized.parse_trueTypo      thrpt    2  317602111,402          ops/s
-ParseBooleanTestOptimized.parse_zero          thrpt    2  310810066,584          ops/s
-ParseBooleanTestSimple.parse_false            thrpt    2  351375495,602          ops/s
-ParseBooleanTestSimple.parse_falseTypo        thrpt    2  157787340,861          ops/s
-ParseBooleanTestSimple.parse_one              thrpt    2  351966159,873          ops/s
-ParseBooleanTestSimple.parse_true             thrpt    2  356103784,238          ops/s
-ParseBooleanTestSimple.parse_trueTypo         thrpt    2  352498113,624          ops/s
-ParseBooleanTestSimple.parse_zero             thrpt    2  141908460,615          ops/s
-ParseBooleanTestStringSwitch.parse_false      thrpt    2  313750722,228          ops/s
-ParseBooleanTestStringSwitch.parse_falseTypo  thrpt    2  179949450,197          ops/s
-ParseBooleanTestStringSwitch.parse_one        thrpt    2  283024062,516          ops/s
-ParseBooleanTestStringSwitch.parse_true       thrpt    2  260904588,300          ops/s
-ParseBooleanTestStringSwitch.parse_trueTypo   thrpt    2  315527415,172          ops/s
-ParseBooleanTestStringSwitch.parse_zero       thrpt    2  189417193,535          ops/s
+ParseBooleanTestJDK7_80.parse_false           thrpt    2   73400511,600          ops/s
+ParseBooleanTestJDK7_80.parse_falseTypo       thrpt    2   89640753,643          ops/s
+ParseBooleanTestJDK7_80.parse_one             thrpt    2  183311579,961          ops/s
+ParseBooleanTestJDK7_80.parse_true            thrpt    2   85892400,632          ops/s
+ParseBooleanTestJDK7_80.parse_trueTypo        thrpt    2  110524920,689          ops/s
+ParseBooleanTestJDK7_80.parse_zero            thrpt    2  172608549,628          ops/s
+ParseBooleanTestOptimized.parse_false         thrpt    2  282254361,860          ops/s
+ParseBooleanTestOptimized.parse_falseTypo     thrpt    2  222494844,073          ops/s
+ParseBooleanTestOptimized.parse_one           thrpt    2  254279599,107          ops/s
+ParseBooleanTestOptimized.parse_true          thrpt    2  165777751,814          ops/s
+ParseBooleanTestOptimized.parse_trueTypo      thrpt    2  274268472,574          ops/s
+ParseBooleanTestOptimized.parse_zero          thrpt    2  255016387,082          ops/s
+ParseBooleanTestSimple.parse_false            thrpt    2  170186950,335          ops/s
+ParseBooleanTestSimple.parse_falseTypo        thrpt    2  112574207,285          ops/s
+ParseBooleanTestSimple.parse_one              thrpt    2  116749421,314          ops/s
+ParseBooleanTestSimple.parse_true             thrpt    2  100308410,122          ops/s
+ParseBooleanTestSimple.parse_trueTypo         thrpt    2  172434443,027          ops/s
+ParseBooleanTestSimple.parse_zero             thrpt    2  131446046,458          ops/s
+ParseBooleanTestStringSwitch.parse_false      thrpt    2  174452560,822          ops/s
+ParseBooleanTestStringSwitch.parse_falseTypo  thrpt    2  176402174,693          ops/s
+ParseBooleanTestStringSwitch.parse_one        thrpt    2  127802180,878          ops/s
+ParseBooleanTestStringSwitch.parse_true       thrpt    2  107213284,625          ops/s
+ParseBooleanTestStringSwitch.parse_trueTypo   thrpt    2  177214574,622          ops/s
+ParseBooleanTestStringSwitch.parse_zero       thrpt    2  188824034,479          ops/s
 ```
 
 ![Charts](perf-tests.png)
