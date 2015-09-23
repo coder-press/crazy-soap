@@ -41,6 +41,18 @@ public class TestDatatypeConverter {
 //		whyTrue(" t r u ");
 		whyFalse("foolish");
 		whyNPE("");
+		
+		whyFalse("    ");
+		whyNPE(null);
+		whyStringIndexOutOfBound("t");
+		whyFalse("tru");
+		whyTrue("truu");
+		whyTrue(" truu");
+		whyNPE("  tru u ");
+		whyTrue("  true ");
+		whyFalse("x");
+		whyFalse("x ");
+		whyFalse("x      ");
 	}
 	
 	
@@ -54,6 +66,15 @@ public class TestDatatypeConverter {
 			parseBoolean(value);
 			fail("not NPE");
 		} catch (IndexOutOfBoundsException x) {
+			
+		}
+	}
+	
+	private static void whyStringIndexOutOfBound(String value) {
+		try {
+			parseBoolean(value);
+			fail("not NPE");
+		} catch (StringIndexOutOfBoundsException x) {
 			
 		}
 	}
