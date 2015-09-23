@@ -1,8 +1,9 @@
-# crazy-soap
+# Crazy Soap 
 
-Soap Code Black Magic
+There is some funny code in javax.xml.bind.DatatypeConverterImpl.parseBoolean(String). Here you will find
+performance tests and a test which shows the funny side of the jdk implementation.
 
-see https://docs.google.com/presentation/d/1Y9NbTeAaftvAY00eJlU14RDbZTbqHmJJia_OX88etAM/edit?usp=sharing
+Or just have a look at this [Slideshow](https://docs.google.com/presentation/d/1Y9NbTeAaftvAY00eJlU14RDbZTbqHmJJia_OX88etAM/edit?usp=sharing)
 
 ## Perf Tests (with jmh)
 
