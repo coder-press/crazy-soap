@@ -6,6 +6,7 @@ see https://docs.google.com/presentation/d/1Y9NbTeAaftvAY00eJlU14RDbZTbqHmJJia_O
 
 ## Perf Tests (with jmh)
 
+```
 Benchmark                                      Mode  Cnt          Score   Error  Units
 ParseBooleanTestJDK7_80.parse_false           thrpt    2   73615488,070          ops/s
 ParseBooleanTestJDK7_80.parse_falseTypo       thrpt    2   87833831,319          ops/s
@@ -31,5 +32,6 @@ ParseBooleanTestStringSwitch.parse_one        thrpt    2  283024062,516         
 ParseBooleanTestStringSwitch.parse_true       thrpt    2  260904588,300          ops/s
 ParseBooleanTestStringSwitch.parse_trueTypo   thrpt    2  315527415,172          ops/s
 ParseBooleanTestStringSwitch.parse_zero       thrpt    2  189417193,535          ops/s
+```
 
 ![Charts](perf-tests.png)
