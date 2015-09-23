@@ -32,3 +32,4 @@ ParseBooleanTestStringSwitch.parse_true       thrpt    2  260904588,300         
 ParseBooleanTestStringSwitch.parse_trueTypo   thrpt    2  315527415,172          ops/s
 ParseBooleanTestStringSwitch.parse_zero       thrpt    2  189417193,535          ops/s
 
+![Charts](perf-tests.png)
