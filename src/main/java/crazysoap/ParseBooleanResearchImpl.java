@@ -26,6 +26,11 @@ public class ParseBooleanResearchImpl implements ParseBoolean {
 				return chars[0]=='t' && chars[1]=='r' && chars[2]=='u' && chars[3]=='e';
 			}
 		}
+		if (length==5) {
+			if (chars[0]=='f' && chars[1]=='a' && chars[2]=='l' && chars[3]=='s' && chars[4]=='e') {
+				return false;
+			}
+		}
 		
 		int start=-1;
 		

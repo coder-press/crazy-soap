@@ -32,14 +32,6 @@ public class ParseBooleanJDK6_27  implements ParseBoolean {
         return false;
     }
 
-	 public static final boolean isWhiteSpace(CharSequence s) {
-         for( int i=s.length()-1; i>=0; i-- )
-             if(!isWhiteSpace(s.charAt(i)))
-                 return false;
-         return true;
-     }
-
-		     
      public static final boolean isWhiteSpace(char ch) {
         // most of the characters are non-control characters.
         // so check that first to quickly return false for most of the cases.

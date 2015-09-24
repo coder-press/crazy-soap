@@ -16,17 +16,20 @@ public class ParseBooleanJDK6_27Optimized  implements ParseBoolean {
 	}
 	
 	public static Boolean _parseBoolean(CharSequence literal) {
+        if (literal.length() <= 0) {
+            return null;
+        }
+        
         int i=0;
         int len = literal.length();
         char ch;
-        if (len <= 0) {
-            return null;
-        }
         do {
             ch = literal.charAt(i++);
         } while(isWhiteSpace(ch) && i<len);
 
-        return ( ch=='t' || ch=='1' );
+        if( ch=='t' || ch=='1' )        return true;
+        if( ch=='f' || ch=='0' )        return false;
+        return false;
     }
 
      public static final boolean isWhiteSpace(char ch) {

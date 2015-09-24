@@ -5,8 +5,8 @@ public enum Implementation {
 	JDK6_27(new ParseBooleanJDK6_27()),
 	JDK6_27_OPT(new ParseBooleanJDK6_27Optimized()),
 	SIMPLE(new ParseBooleanSimpleImpl()),
-	STRINGSWITCH(new ParseBooleanStringSwitch()),
-	OPTIMIZED(new ParseBooleanOptimizedImpl()),
+//	STRINGSWITCH(new ParseBooleanStringSwitch()),
+//	OPTIMIZED(new ParseBooleanOptimizedImpl()),
 	RESEARCH(new ParseBooleanResearchImpl()),
 	;
 	
