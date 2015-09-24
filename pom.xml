@@ -101,6 +101,8 @@
                                 <classpath/>
                                 <argument>org.openjdk.jmh.Main</argument>
                                 <argument>.*</argument>
+                                <argument>-rf</argument>
+                                <argument>csv</argument>
                             </arguments>
                         </configuration>
                     </execution>
