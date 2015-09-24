@@ -1,6 +1,5 @@
-package crazysoap.jdk7_80;
+package crazysoap;
 
-import crazysoap.ParseBoolean;
 
 
 public class ParseBooleanJDK7_80  implements ParseBoolean {

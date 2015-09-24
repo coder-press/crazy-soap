@@ -2,7 +2,6 @@ package crazysoap;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
-import crazysoap.jdk7_80.ParseBooleanJDK7_80;
 
 import org.junit.Test;
 

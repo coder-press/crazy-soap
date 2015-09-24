@@ -1,10 +1,6 @@
 package crazysoap;
 
 import static org.junit.Assert.assertEquals;
-import crazysoap.jdk7_80.ParseBooleanJDK7_80;
-import crazysoap.optimized.ParseBooleanOptimizedImpl;
-import crazysoap.simple.ParseBooleanSimpleImpl;
-import crazysoap.stringswitch.ParseBooleanStringSwitch;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,6 +15,7 @@ public class ParseBooleanTest {
 	public static ParseBoolean[] ALL() {
 		return new  ParseBoolean[] {
 			new ParseBooleanJDK7_80(),
+			new ParseBooleanJDK6_27(),
 			new ParseBooleanSimpleImpl(),
 			new ParseBooleanOptimizedImpl(),
 			new ParseBooleanStringSwitch()
@@ -36,6 +33,9 @@ public class ParseBooleanTest {
 		assertEquals(false, impl.parse("false"));
 		assertEquals(false, impl.parse("0"));
 		assertEquals(false, impl.parse("fals"));
-		assertEquals(false, impl.parse("tru"));
+//		assertEquals(false, impl.parse("tru")); 6_27 != 7_80
+		assertEquals(true, impl.parse("  true  "));
+		assertEquals(false, impl.parse("  false  "));
+		assertEquals(true, impl.parse("  1  "));
 	}
 }

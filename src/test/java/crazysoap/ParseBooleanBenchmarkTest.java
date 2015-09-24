@@ -1,10 +1,5 @@
 package crazysoap;
 
-import crazysoap.jdk7_80.ParseBooleanJDK7_80;
-import crazysoap.optimized.ParseBooleanOptimizedImpl;
-import crazysoap.simple.ParseBooleanSimpleImpl;
-import crazysoap.stringswitch.ParseBooleanStringSwitch;
-
 import java.util.concurrent.TimeUnit;
 
 import org.openjdk.jmh.annotations.Benchmark;
@@ -43,9 +38,9 @@ import org.openjdk.jmh.annotations.Warmup;
 @State(Scope.Benchmark)
 public class ParseBooleanBenchmarkTest {
 
-	@Param({"true","false","1","0","tru","fals"})
+	@Param({"true","false","1","0","tru","fals","  true  ","  1  ","  false  "})
 	public String valueParam;
-	@Param({"jdk7_80","simple","optimized","switch"})
+	@Param({"jdk7_80","jdk6_27", "simple","optimized","switch"})
 	public String implId;
 	
 	private ParseBoolean impl;
@@ -71,6 +66,7 @@ public class ParseBooleanBenchmarkTest {
 	private static ParseBoolean instanceOf(String id) {
 		switch (id) {
 			case "jdk7_80":return new ParseBooleanJDK7_80();
+			case "jdk6_27":return new ParseBooleanJDK6_27();
 			case "simple":return new ParseBooleanSimpleImpl();
 			case "optimized":return new ParseBooleanOptimizedImpl();
 			case "switch":return new ParseBooleanStringSwitch();
